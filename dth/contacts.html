@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="PETITJEU.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Accueil</a></li>
+                <li><a href="apropos.html">À propos de moi</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="experience.html">Expérience Professionnelle</a></li>
+                <li><a href="contacts.html" class="active">Contacts</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Me contacter</h1>
+
+        <div class="game-container">
+            <p>Bienvenue dans le jeu de piste pour découvrir mon numéro de téléphone ! Suivez les indices ci-dessous :</p>
+
+            <p>Indice 1 : Le numéro commence par <strong>06</strong>. C'est un préfixe courant pour les téléphones mobiles en France.</p>
+            <button id="step1-button" onclick="showStep2()">Suivant</button>
+            
+            <div id="step2" class="hidden">
+                <p>Bravo ! Maintenant, le prochain indice : Le deuxième chiffre est le même que celui de mon âge. J'ai 19 ans !</p>
+                <button id="step2-button" onclick="showStep3()">Suivant</button>
+            </div>
+
+            <div id="step3" class="hidden">
+                <p>Bien joué ! Le troisième chiffre est le nombre de Language info que je maîtrise.</p>
+                <button id="step3-button" onclick="showStep4()">Suivant</button>
+            </div>
+
+            <div id="step4" class="hidden">
+                <p>Pas mal pour un mortel ! Le quatrième chiffre est le nombre de syllabes dans le mot "Tino". Combien en trouvez-vous ?</p>
+                <input type="number" id="syllable-guess" placeholder="Entrez votre réponse" />
+                <button onclick="checkSyllableGuess()">Vérifier</button>
+                <p id="syllable-feedback" class="hidden"></p>
+            </div>
+
+            <div id="step5" class="hidden">
+                <p>Félicitations pour avoir trouvé le quatrième chiffre ! Maintenant, le dernier indice : Les deux derniers chiffres sont le nombre de lettres dans le mot "data" et "analyst". Combien de lettres cela fait-il ?</p>
+                <input type="number" id="final-guess" placeholder="Entrez votre réponse" />
+                <button onclick="checkFinalGuess()">Vérifier</button>
+                <p id="final-feedback" class="hidden"></p>
+            </div>
+
+            <div id="final-step" class="hidden">
+                <p>Bravo ! Vous avez réussi à découvrir tous les indices. Mais attention... <strong>On ne met pas son numéro sur Internet !!</strong></p>
+                <img src="screamer.gif" alt="Screamer" />
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <p class="footer-description">Tino CARRE, étudiant en sciences des données.</p>
+            <div class="footer-contacts">
+                <a href="https://www.linkedin.com/in/tino-carr%C3%A9-02756a226/" target="_blank">
+                    <img src="linkedin-icon.png" alt="LinkedIn" class="social-icon"> LinkedIn
+                </a>
+                <a href="carretino3@gmail.com">
+                    <img src="email-icon.png" alt="Email" class="social-icon"> Email
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

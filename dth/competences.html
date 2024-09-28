@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="FonctionCompétences.js" defer></script> <!-- JavaScript (merci chatgpt pour celui la) -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="apropos.html">À propos de moi</a></li>
+                <li><a href="competences.html" class="active">Compétences</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="experience.html">Expérience Professionnelle</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="competences-section">
+            <h1>Mes Compétences</h1>
+            <p>Choisissez une unité d'enseignement (UE) pour voir un  exemple d'un projet réalisé.</p>
+            
+            <!-- UE -->
+            <div class="ue-container">
+                <div class="ue-item" onclick="showProject('project1.jpg')">
+                    <h3>TRAITER - Traiter des données à des fins décisionnelles</h3>
+                </div>
+                <div class="ue-item" onclick="showProject('project2.jpg')">
+                    <h3>ANALYSER - Analyser statistiquement les données</h3>
+                </div>
+                <div class="ue-item" onclick="showProject('project3.jpg')">
+                    <h3>VALORISER - Valoriser une production dans un contexte professionnel</h3>
+                </div>
+            </div>
+            
+            <div class="project-display">
+                <img id="project-image" src="" alt="Projet associé" style="display: none;">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Tino CARRE, étudiant en sciences des données.</p>
+    </footer>
+</body>
+</html>
